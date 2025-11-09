@@ -21,70 +21,43 @@ File conversions include
 15. youtube to mp3
 
 **All names above should be straight forward. These are all case sensitive inputs into the main.py script**
-Dependencies so that code could run smooth:
 
-🧩 Environment Setup — All Converter Scripts
-✅ 1️⃣ Create & Activate a Virtual Environment
-# Create a virtual environment
+# ===============================
+# 🚀 FULL SETUP (DEPENDENCIES)
+# ===============================
+
+# 1️⃣ Create and activate a virtual environment
 python -m venv venv
+venv\Scripts\activate        # (Windows)
+# or
+source venv/bin/activate     # (macOS/Linux)
 
-# Activate it
-# On Windows:
-venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
-
-✅ 2️⃣ Install All Required Dependencies
+# 2️⃣ Install all dependencies
 pip install -U pillow pillow-heif pdf2image PyPDF2 yt-dlp ffmpeg-downloader moviepy
 
-✅ 3️⃣ Install ffmpeg (for audio/video conversions)
-# Download and register ffmpeg automatically
+# 3️⃣ Install ffmpeg (for YouTube → MP3 and video/audio conversions)
 ffdl install
-💡 This only needs to be done once.
-ffmpeg will be stored in:
-Windows: C:\Users\<USERNAME>\AppData\Local\ffmpeg-downloader\bin
-Mac/Linux: ~/.local/ffmpeg-downloader/bin
-Verify installation:
+
+# 4️⃣ Verify ffmpeg installed correctly
 ffmpeg -version
 
-✅ 4️⃣ Install Poppler (for PDF → Image conversions)
-🪟 Windows
+# 5️⃣ (Windows only) Install Poppler for PDF → image conversions
+#    Download from: https://github.com/oschwartz10612/poppler-windows/releases
+#    Extract the ZIP (e.g., to C:\Program Files\poppler)
+#    Add "C:\Program Files\poppler\bin" to your PATH
 
-Download from: https://github.com/oschwartz10612/poppler-windows/releases
-
-Extract the ZIP (e.g., to C:\Program Files\poppler)
-
-Add the bin folder to your system PATH (e.g. C:\Program Files\poppler\bin)
-🍎 macOS
+#    OR on macOS:
 brew install poppler
-🐧 Linux
+
+#    OR on Linux:
 sudo apt install poppler-utils
 
-✅ 5️⃣ Verify Everything Is Installed
+# 6️⃣ Verify Python packages
 python -m PIL
 python -c "from pillow_heif import register_heif_opener; register_heif_opener(); print('✅ HEIC support OK')"
 python -c "import yt_dlp; print('✅ yt-dlp OK')"
 python -c "import pdf2image; print('✅ pdf2image OK')"
 python -c "import moviepy; print('✅ moviepy OK')"
-ffmpeg -version
 
-✅ 6️⃣ Optional: Generate a requirements.txt
+# 7️⃣ (Optional) Freeze all dependencies into a requirements file
 pip freeze > requirements.txt
-
-
-Then others can simply do:
-
-pip install -r requirements.txt
-
-🧰 Summary of Dependencies
-Package	Purpose
-pillow	Core image manipulation (JPG, PNG, PDF export)
-pillow-heif	Adds HEIC/HEIF image format support
-pdf2image	Converts PDF pages to images
-PyPDF2	Merges, splits, or manipulates PDFs
-yt-dlp	Downloads YouTube videos and audio
-ffmpeg-downloader	Automatically installs and manages ffmpeg
-moviepy	Used for video/audio conversions (MP4 → MP3, etc.)
-poppler	Backend for reading PDF pages (required by pdf2image)
-
-✅ After completing these steps, every script in your repository will work out of the box.
