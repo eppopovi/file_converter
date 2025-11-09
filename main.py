@@ -28,3 +28,5 @@ if __name__ == "__main__":
         if combine == "yes":
             directory = input("Enter the directory path containing the PDFs: ").strip()
             merge_pdfs_in_directory(directory)
+    else:
+        print("Invalid entry. Please try again")
