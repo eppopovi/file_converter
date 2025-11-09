@@ -6,7 +6,7 @@ import warnings
 warnings.filterwarnings("ignore", message="image file could not be identified because AVIF support not installed")
 
 
-def convert_jpg_and_png_to_pdf(input_path, output_path=None):
+def convert_jpg_or_png_to_pdf(input_path, output_path=None):
     # --- Clean up path if pasted with quotes (Windows Copy as Path) ---
     if (input_path.startswith('"') and input_path.endswith('"')) or \
        (input_path.startswith("'") and input_path.endswith("'")):
