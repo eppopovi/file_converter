@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     if choice == "1":
         directory = input("Enter the directory path containing the PDFs: ").strip()
-        merge_pdfs_in_directory(directory)
+        merge_pdfs(directory)
 
     elif choice == "2":
         input_path = input("Enter the path to your image file: ").strip()
@@ -41,7 +41,7 @@ if __name__ == "__main__":
         combine = input("Would you like to merge all PDFs in a folder now? (yes/no): ").strip().lower()
         if combine == "yes":
             directory = input("Enter the directory path containing the PDFs: ").strip()
-            merge_pdfs_in_directory(directory)
+            merge_pdfs(directory)
 
     else:
         print("Invalid entry. Please try again")
