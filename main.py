@@ -1,5 +1,7 @@
 from merge_pdfs_in_directory_script import merge_pdfs_in_directory
 from jpg_or_png_to_pdf_script import image_to_pdf
+from heic_to_jpg_script import heic_to_jpg
+from heic_to_png_script import heic_to_png
 
 if __name__ == "__main__":
     print("What would you like to do today?")
@@ -7,6 +9,8 @@ if __name__ == "__main__":
     print("2 Convert an image (JPG/PNG) to PDF")
     print("3️ Both (convert images first (JPG/PNG), then merge PDFs in the folder)")
     print("4 Convert an image (HEIC) to JPG")
+    print("5 Convert a directory of HEIC images to JPG")
+    print("6 Convert a directory of HEIC images to PNG")
     
     choice = input("\nEnter your choice (1/2/3...): ").strip()
 
