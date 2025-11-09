@@ -1,13 +1,14 @@
-from pdf_merger import merge_pdfs_in_directory
-from file_converter import image_to_pdf
+from merge_pdfs_in_directory import merge_pdfs_in_directory
+from jpg_or_png_to_pdf import image_to_pdf
 
 if __name__ == "__main__":
     print("What would you like to do today?")
-    print("1️⃣  Merge all PDFs in a folder directory")
-    print("2️⃣  Convert an image (JPG/PNG) to PDF")
-    print("3️⃣  Both (convert images first, then merge PDFs in the folder)")
+    print("1️ Merge all PDFs in a folder directory")
+    print("2 Convert an image (JPG/PNG) to PDF")
+    print("3️ Both (convert images first (JPG/PNG), then merge PDFs in the folder)")
+    print("4 Convert an image (HEIC) to JPG")
     
-    choice = input("\nEnter your choice (1/2/3): ").strip()
+    choice = input("\nEnter your choice (1/2/3...): ").strip()
 
     if choice == "1":
         directory = input("Enter the directory path containing the PDFs: ").strip()
