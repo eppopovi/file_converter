@@ -1,5 +1,5 @@
-from merge_pdfs_in_directory import merge_pdfs_in_directory
-from jpg_or_png_to_pdf import image_to_pdf
+from merge_pdfs_in_directory_script import merge_pdfs_in_directory
+from jpg_or_png_to_pdf_script import image_to_pdf
 
 if __name__ == "__main__":
     print("What would you like to do today?")
