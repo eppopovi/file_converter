@@ -22,9 +22,9 @@ File conversions include
 
 **All names above should be straight forward. These are all case sensitive inputs into the main.py script**
 
-# ===============================
-# 🚀 FULL SETUP (DEPENDENCIES)
-# ===============================
+
+# FULL SETUP (DEPENDENCIES)
+
 
 | Package               | Purpose                                               |
 | --------------------- | ----------------------------------------------------- |
@@ -37,7 +37,7 @@ File conversions include
 | **moviepy**           | Used for video/audio conversions (MP4 → MP3, etc.)    |
 | **poppler**           | Backend for reading PDF pages (required by pdf2image) |
 
-Create and activate a virtual environment
+# 1. Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate        # (Windows)
 or
