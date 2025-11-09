@@ -3,7 +3,7 @@ Aimed to convert any file to any other file.
 I don't like how I need to go online to convert files from one format to another. 
 No one ever knows if those websites are keeping or using your sensitive files. 
 
-File conversions include
+# Current File Conversions Supported
 1. Merge pdf
 2. pdf to heic
 3. pdf to jpg
@@ -43,32 +43,29 @@ venv\Scripts\activate        # (Windows)
 or
 source venv/bin/activate     # (macOS/Linux)
 
-Install all dependencies
+# 2. Install all dependencies
 pip install -U pillow pillow-heif pdf2image PyPDF2 yt-dlp ffmpeg-downloader moviepy
 
-Install ffmpeg (for YouTube → MP3 and video/audio conversions)
+# 3. Install ffmpeg (for YouTube → MP3 and video/audio conversions)
 ffdl install
-
 Verify ffmpeg installed correctly
 ffmpeg -version
 
-(Windows only) Install Poppler for PDF → image conversions
+# 4. (Windows only) Install Poppler for PDF → image conversions
 Download from: https://github.com/oschwartz10612/poppler-windows/releases
 Extract the ZIP (e.g., to C:\Program Files\poppler)
 Add "C:\Program Files\poppler\bin" to your PATH
-
 OR on macOS:
 brew install poppler
-
 OR on Linux:
 sudo apt install poppler-utils
 
-Verify Python packages
+# 5. Verify Python packages
 python -m PIL
 python -c "from pillow_heif import register_heif_opener; register_heif_opener(); print('HEIC support OK')"
 python -c "import yt_dlp; print('yt-dlp OK')"
 python -c "import pdf2image; print('pdf2image OK')"
 python -c "import moviepy; print('moviepy OK')"
 
-(Optional) Freeze all dependencies into a requirements file
+# 6. (Optional) Freeze all dependencies into a requirements file
 pip freeze > requirements.txt
