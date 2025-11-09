@@ -21,7 +21,7 @@ def ensure_ffmpeg_available():
         )
     return ffmpeg_path
 
-def download_youtube_as_mp3(urls, output_folder="."):
+def convert_youtube_to_mp3(urls, output_folder="."):
     """Download YouTube videos as MP3 using yt-dlp + ffmpeg."""
     os.makedirs(output_folder, exist_ok=True)
     ffmpeg_path = ensure_ffmpeg_available()
@@ -59,5 +59,5 @@ if __name__ == "__main__":
         print("No links entered.")
     else:
         print(f"\nStarting {len(urls)} download(s)...\n")
-        download_youtube_as_mp3(urls, output_folder)
+        convert_youtube_to_mp3(urls, output_folder)
         print("\n✅ All downloads complete!")

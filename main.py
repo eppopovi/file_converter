@@ -18,6 +18,8 @@ from heic_to_png_script import convert_heic_to_png
 
 from jpg_or_png_to_pdf_script import convert_jpg_or_png_to_pdf
 
+from youtube_to_mp3_script import convert_youtube_to_mp3 
+
 # from datetime_from_jpg import rename_jpg_to_datetime
 # from datetime_from_png import rename_png_to_datetime
 
