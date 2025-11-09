@@ -49,7 +49,4 @@ def convert_jpg_to_pdf(directory):
             print(f"⚠️ Error converting {file}: {e}")
 
     print(f"\n🎉 Conversion complete! PDFs saved in: {output_dir}")
-
-if __name__ == "__main__":
-    directory = input("Enter the directory path containing JPG files: ").strip()
-    convert_jpg_to_pdf(directory)
+    
