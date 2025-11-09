@@ -6,6 +6,9 @@ import os
 import subprocess
 import shutil
 
+ffmpeg_directory_run = r"C:\Users\Heron\AppData\Local\ffmpegio\ffmpeg-downloader\ffmpeg\bin"  
+os.chdir(ffmpeg_directory_run)
+
 def ensure_ffmpeg_available():
     """Return path to ffmpeg binary installed by ffmpeg-downloader."""
     # Default installation folder used by ffmpeg-downloader
@@ -45,7 +48,7 @@ def convert_youtube_to_mp3(urls, output_folder="."):
 
 if __name__ == "__main__":
     print("🎧 YouTube → MP3 Converter (yt-dlp + ffmpeg-downloader)\n")
-    output_folder = input("Output folder (blank = current): ").strip() or "."
+    output_folder = input("Output folder (if you leave this blank it will save to your ffpmeg bin directory): ").strip() or "."
 
     urls = []
     while True:

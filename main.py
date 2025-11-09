@@ -119,6 +119,24 @@ if __name__ == "__main__":
             directory = input("Enter the directory path containing the PDFs: ").strip()
             merge_pdfs(directory)
 # ----------------------------------------------------------------------------------
+    elif choice == "youtube to mp3":
+        print("\n🎧 YouTube → MP3 Converter")
+        output_folder = input("Output folder (if you leave this blank it will save to your ffpmeg bin directory): ").strip() or "."
+        urls = []
+
+        while True:
+            link = input("Enter YouTube link (or 'done'): ").strip()
+            if link.lower() == "done":
+                break
+            if link:
+                urls.append(link)
+
+        if not urls:
+            print("No links entered. Returning to main menu...")
+        else:
+            print(f"\nStarting {len(urls)} download(s)...\n")
+            convert_youtube_to_mp3(urls, output_folder)
+# ----------------------------------------------------------------------------------
     # elif choice == "datetime from jpg":
     #     input_path = input("Enter the path to your JPG files: ").strip()
     #     datetime(input_path)
