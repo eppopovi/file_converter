@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     print("'jpg or png to pdf': Convert all PNGs or JPGs in a folder to PDFs")
 
-    print("'datetime from png': Assign date and time to each PNG")
+    print("'sort files': Sort files by type and date")
     
     
     choice = input("\nEnter your choice as outlined in the documentaton: ").strip()
