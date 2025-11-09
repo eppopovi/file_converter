@@ -26,38 +26,49 @@ File conversions include
 # 🚀 FULL SETUP (DEPENDENCIES)
 # ===============================
 
-# 1️⃣ Create and activate a virtual environment
+| Package               | Purpose                                               |
+| --------------------- | ----------------------------------------------------- |
+| **pillow**            | Core image manipulation (JPG, PNG, PDF export)        |
+| **pillow-heif**       | Adds HEIC/HEIF image format support                   |
+| **pdf2image**         | Converts PDF pages to images                          |
+| **PyPDF2**            | Merges, splits, or manipulates PDFs                   |
+| **yt-dlp**            | Downloads YouTube videos and audio                    |
+| **ffmpeg-downloader** | Automatically installs and manages `ffmpeg`           |
+| **moviepy**           | Used for video/audio conversions (MP4 → MP3, etc.)    |
+| **poppler**           | Backend for reading PDF pages (required by pdf2image) |
+
+Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate        # (Windows)
-# or
+or
 source venv/bin/activate     # (macOS/Linux)
 
-# 2️⃣ Install all dependencies
+Install all dependencies
 pip install -U pillow pillow-heif pdf2image PyPDF2 yt-dlp ffmpeg-downloader moviepy
 
-# 3️⃣ Install ffmpeg (for YouTube → MP3 and video/audio conversions)
+Install ffmpeg (for YouTube → MP3 and video/audio conversions)
 ffdl install
 
-# 4️⃣ Verify ffmpeg installed correctly
+Verify ffmpeg installed correctly
 ffmpeg -version
 
-# 5️⃣ (Windows only) Install Poppler for PDF → image conversions
-#    Download from: https://github.com/oschwartz10612/poppler-windows/releases
-#    Extract the ZIP (e.g., to C:\Program Files\poppler)
-#    Add "C:\Program Files\poppler\bin" to your PATH
+(Windows only) Install Poppler for PDF → image conversions
+Download from: https://github.com/oschwartz10612/poppler-windows/releases
+Extract the ZIP (e.g., to C:\Program Files\poppler)
+Add "C:\Program Files\poppler\bin" to your PATH
 
-#    OR on macOS:
+OR on macOS:
 brew install poppler
 
-#    OR on Linux:
+OR on Linux:
 sudo apt install poppler-utils
 
-# 6️⃣ Verify Python packages
+Verify Python packages
 python -m PIL
-python -c "from pillow_heif import register_heif_opener; register_heif_opener(); print('✅ HEIC support OK')"
-python -c "import yt_dlp; print('✅ yt-dlp OK')"
-python -c "import pdf2image; print('✅ pdf2image OK')"
-python -c "import moviepy; print('✅ moviepy OK')"
+python -c "from pillow_heif import register_heif_opener; register_heif_opener(); print('HEIC support OK')"
+python -c "import yt_dlp; print('yt-dlp OK')"
+python -c "import pdf2image; print('pdf2image OK')"
+python -c "import moviepy; print('moviepy OK')"
 
-# 7️⃣ (Optional) Freeze all dependencies into a requirements file
+(Optional) Freeze all dependencies into a requirements file
 pip freeze > requirements.txt
