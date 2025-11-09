@@ -20,8 +20,7 @@ from jpg_or_png_to_pdf_script import convert_jpg_or_png_to_pdf
 
 from youtube_to_mp3_script import convert_youtube_to_mp3 
 
-# from datetime_from_jpg import rename_jpg_to_datetime
-# from datetime_from_png import rename_png_to_datetime
+from sort_by_type_and_date_script import sort_files_by_type_and_date
 
 if __name__ == "__main__":
     print("What would you like to do today? Please refer to documentation for details on what the tool offers.")
@@ -46,8 +45,7 @@ if __name__ == "__main__":
 
     print("'jpg or png to pdf': Convert all PNGs or JPGs in a folder to PDFs")
 
-    # print("'datetime from jpg': Assign date and time to each JPG")
-    # print("'datetime from png': Assign date and time to each PNG")
+    print("'datetime from png': Assign date and time to each PNG")
     
     
     choice = input("\nEnter your choice as outlined in the documentaton: ").strip()
@@ -137,13 +135,9 @@ if __name__ == "__main__":
             print(f"\nStarting {len(urls)} download(s)...\n")
             convert_youtube_to_mp3(urls, output_folder)
 # ----------------------------------------------------------------------------------
-    # elif choice == "datetime from jpg":
-    #     input_path = input("Enter the path to your JPG files: ").strip()
-    #     datetime(input_path)
-
-    # elif choice == "datetime from png":
-    #     input_path = input("Enter the path to your PNG and JPG files: ").strip()
-    #     datetime(input_path)
+    elif choice == "sort files":
+        input_path = input("Enter the path to your files to sort by type and date: ").strip()
+        sort_files_by_type_and_date(input_path)
 # ----------------------------------------------------------------------------------
     else:
         print("Invalid entry. Please try again")
