@@ -1,16 +1,26 @@
-from merge_pdfs_in_directory_script import merge_pdfs_in_directory
+from merge_pdfs_script import merge_pdfs
+from jpg_to_pdf_script import convert_jpg_to_pdf
+from png_to_pdf_script import convert_png_to_pdf
 from jpg_or_png_to_pdf_script import image_to_pdf
-from heic_to_jpg_script import heic_to_jpg
-from heic_to_png_script import heic_to_png
+from heic_to_jpg_script import convert_heic_to_jpg
+from heic_to_png_script import convert_heic_to_png
 
 if __name__ == "__main__":
-    print("What would you like to do today?")
-    print("1️ Merge all PDFs in a folder directory")
-    print("2 Convert an image (JPG/PNG) to PDF")
-    print("3️ Both (convert images first (JPG/PNG), then merge PDFs in the folder)")
-    print("4 Convert an image (HEIC) to JPG")
-    print("5 Convert a directory of HEIC images to JPG")
-    print("6 Convert a directory of HEIC images to PNG")
+    print("What would you like to do today? Please refer to documentation for details on what the tool offers.")
+    print("'pdf merge': Merge all PDFs in a folder to one PDF")
+    print("'pdf to jpg': Convert all PDFs in a folder to JPGs")
+    print("'pdf to png': Convert all PDFs in a folder to PNGs")
+    print("'jpg to pdf': Convert all JPGs in a folder to PDFs")
+    print("'jpg to png': Convert all JPGs in a folder to PNGs")
+    print("'jpg to heic': Convert all JPGs in a folder to HEICs")
+    print("'png to pdf': Convert all PNG in a folder to PDFs")
+    print("'png to jpg': Convert all PNG in a folder to JPGs")
+    print("'png to heic': Convert all PNG in a folder to HEICs")
+    print("'heic to jpg': Convert all HEIC in a folder to JPGs")
+    print("'heic to png': Convert all HEIC in a folder to PNG")
+    print("'heic to pdf': Convert all HEIC in a folder to PDFs")
+    print("'datetime from jpg': Assign date and time to each JPG")
+    print("'datetime from png': Assign date and time to each PNG")
     
     choice = input("\nEnter your choice (1/2/3...): ").strip()
 
@@ -32,5 +42,6 @@ if __name__ == "__main__":
         if combine == "yes":
             directory = input("Enter the directory path containing the PDFs: ").strip()
             merge_pdfs_in_directory(directory)
+
     else:
         print("Invalid entry. Please try again")

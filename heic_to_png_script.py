@@ -9,7 +9,7 @@ pip install pillow pillow-heif
 
 ─────────────────────────────
 💡 USAGE:
-python heic_to_png.py
+python heic_to_png_script.py
 """
 
 import os
@@ -19,7 +19,7 @@ from PIL import Image
 # Register HEIF/HEIC support for Pillow
 register_heif_opener()
 
-def heic_to_png(directory):
+def convert_heic_to_png(directory):
     """Convert all HEIC files in a folder to PNG."""
     if not os.path.isdir(directory):
         print(f"❌ Invalid directory: {directory}")
@@ -51,4 +51,4 @@ def heic_to_png(directory):
 
 if __name__ == "__main__":
     directory = input("Enter the directory path containing HEIC files: ").strip()
-    heic_to_png(directory)
+    convert_heic_to_png(directory)

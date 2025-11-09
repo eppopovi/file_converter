@@ -1,7 +1,7 @@
 import os
 from PyPDF2 import PdfMerger
 
-def merge_pdfs_in_directory(directory_path):
+def merge_pdfs(directory_path):
     if not os.path.isdir(directory_path):
         print(f"Error: '{directory_path}' is not a valid directory.")
         return
