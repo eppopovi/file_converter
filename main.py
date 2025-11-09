@@ -81,27 +81,27 @@ if __name__ == "__main__":
         convert_jpg_to_png(input_path)
 # ----------------------------------------------------------------------------------
     elif choice == "png to heic":
-        input_path = input("Enter the path to your JPG files: ").strip()
+        input_path = input("Enter the path to your PNG files: ").strip()
         convert_png_to_heic(input_path)
 
     elif choice == "png to jpg":
-        input_path = input("Enter the path to your JPG files: ").strip()
+        input_path = input("Enter the path to your PNG files: ").strip()
         convert_png_to_jpg(input_path)
 
     elif choice == "png to pdf":
-        input_path = input("Enter the path to your JPG files: ").strip()
+        input_path = input("Enter the path to your PNG files: ").strip()
         convert_png_to_pdf(input_path)
 # ----------------------------------------------------------------------------------
     elif choice == "heic to jpg":
-        input_path = input("Enter the path to your JPG files: ").strip()
+        input_path = input("Enter the path to your HEIC files: ").strip()
         convert_heic_to_jpg(input_path)
 
     elif choice == "heic to pdf":
-        input_path = input("Enter the path to your JPG files: ").strip()
+        input_path = input("Enter the path to your HEIC files: ").strip()
         convert_heic_to_pdf(input_path)
 
     elif choice == "heic to png":
-        input_path = input("Enter the path to your PNG and JPG files: ").strip()
+        input_path = input("Enter the path to your HEIC files: ").strip()
         convert_heic_to_png(input_path)
 # ----------------------------------------------------------------------------------
     elif choice == "convert jpg or png to pdf" or choice == "convert png or jpg to pdf":
