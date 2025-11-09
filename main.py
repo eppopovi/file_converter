@@ -44,6 +44,8 @@ if __name__ == "__main__":
     print("'heic to png': Convert all HEIC in a folder to PNG")
 
     print("'jpg or png to pdf': Convert all PNGs or JPGs in a folder to PDFs")
+    
+    print("'youtube to mp3': Convert all youtube links provided to mp3s in a specified folder")
 
     print("'sort files': Sort files by type and date")
     
