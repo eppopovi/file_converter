@@ -22,14 +22,14 @@ from youtube_to_mp3_script import convert_youtube_to_mp3
 
 from sort_by_type_and_date_script import sort_files_by_type_and_date
 
-# from hevc_to_mov_script import convert_hevc_to_mov
-# from hevc_to_mp4_script import convert_hevc_to_mp4 
+from hevc_to_mov_script import convert_hevc_to_mov
+from hevc_to_mp4_script import convert_hevc_to_mp4 
 
-# from mov_to_hevc import convert_mov_to_hevc
-# from mov_to_mp4 import convert_mov_to_mp4
+from mov_to_hevc import convert_mov_to_hevc
+from mov_to_mp4 import convert_mov_to_mp4
 
-# from mp4_to_hevc_script import convert_mp4_to_hevc
-# from mp4_to_mov_script import convert_mp4_to_mov
+from mp4_to_hevc_script import convert_mp4_to_hevc
+from mp4_to_mov_script import convert_mp4_to_mov
 
 if __name__ == "__main__":
     print("What would you like to do today? Please refer to documentation for details on what the tool offers.")
@@ -44,13 +44,13 @@ if __name__ == "__main__":
     print("'jpg to pdf': Convert all JPGs in a folder to PDFs")
     print("'jpg to png': Convert all JPGs in a folder to PNGs")
     
-    print("'png to heic': Convert all PNG in a folder to HEICs")
-    print("'png to jpg': Convert all PNG in a folder to JPGs")
-    print("'png to pdf': Convert all PNG in a folder to PDFs")
+    print("'png to heic': Convert all PNGs in a folder to HEICs")
+    print("'png to jpg': Convert all PNGs in a folder to JPGs")
+    print("'png to pdf': Convert all PNGs in a folder to PDFs")
 
-    print("'heic to jpg': Convert all HEIC in a folder to JPGs")
-    print("'heic to pdf': Convert all HEIC in a folder to PDFs")
-    print("'heic to png': Convert all HEIC in a folder to PNG")
+    print("'heic to jpg': Convert all HEICs in a folder to JPGs")
+    print("'heic to pdf': Convert all HEICs in a folder to PDFs")
+    print("'heic to png': Convert all HEICs in a folder to PNG")
 
     print("'jpg or png to pdf': Convert all PNGs or JPGs in a folder to PDFs")
     
@@ -58,6 +58,14 @@ if __name__ == "__main__":
 
     print("'sort files': Sort files by type and date")
     
+    print("'hevc to mov': Convert all HEVCs to MOVs")
+    print("'hevc to mp4': Convert all HEVCs to MP4s")
+        
+    print("'mov to hevc': Convert all MOVs to HEVCs")
+    print("'mov to mp4': Convert all MOVs to MP4s")
+
+    print("'mp4 to hevc': Convert all MP4s to HEVCs")
+    print("'mp4 to mov': Convert all MP4s to MOVs")
     
     choice = input("\nEnter your choice as outlined in the documentaton: ").strip()
 
@@ -149,6 +157,32 @@ if __name__ == "__main__":
     elif choice == "sort files":
         input_path = input("Enter the path to your files to sort by type and date: ").strip()
         sort_files_by_type_and_date(input_path)
+# ----------------------------------------------------------------------------------
+    elif choice == "hevc to mov":
+        input_path = input("Enter the path to your HEVC files: ").strip()
+        convert_hevc_to_mov(input_path)
+
+    elif choice == "hevc to mp4":
+        input_path = input("Enter the path to your HEVC files: ").strip()
+        convert_hevc_to_mp4(input_path)        
+# ----------------------------------------------------------------------------------
+    elif choice == "mov to hevc":
+        input_path = input("Enter the path to your MOV files: ").strip()
+        convert_mov_to_hevc(input_path)
+
+    elif choice == "mov to mp4":
+        input_path = input("Enter the path to your MOV files: ").strip()
+        convert_mov_to_mp4(input_path)       
+# ----------------------------------------------------------------------------------
+    elif choice == "mp4 to hevc":
+        input_path = input("Enter the path to your MP4 files: ").strip()
+        convert_mp4_to_hevc(input_path)
+
+    elif choice == "mp4 to mov":
+        input_path = input("Enter the path to your MP4 files: ").strip()
+        convert_mp4_to_mov(input_path)    
+# ----------------------------------------------------------------------------------
+
 # ----------------------------------------------------------------------------------
     else:
         print("Invalid entry. Please try again")
